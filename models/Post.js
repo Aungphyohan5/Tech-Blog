@@ -17,7 +17,7 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        text: {
+        content: {
             type: DataTypes.TEXT,
             allowNull: false
         },
@@ -37,4 +37,4 @@ Post.init(
     }
 );
 
-module.exports = Post
+module.exports = Post;

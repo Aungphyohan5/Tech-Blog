@@ -8,6 +8,7 @@ class User extends Model {
     }
 }
 
+// create table and columns
 User.init(
     {
         id: {
@@ -16,7 +17,7 @@ User.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
+        username: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -32,7 +33,7 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [8],
+                len: [5],
             },
         },
     },

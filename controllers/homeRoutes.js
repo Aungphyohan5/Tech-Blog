@@ -1,9 +1,23 @@
+
+const sequelize = require('../config/connect');
+const { Comment, Post, User } = require('../models')
 const router = require('express').Router();
 
+router.get('/', (req, res) => {
+    res.render('homepage')
 
-router.get('/', async (req, res) => {
+    // Post.findAll({
+    //     attributes: [
+    //         'id',
+    //         'title',
+    //         'content',
+    //         'created_at'
+    //     ]
+    // })
+});
 
-    res.render('homepage');
+router.get('/login', (req, res) => {
+    res.render('login')
 });
 
 module.exports = router;
